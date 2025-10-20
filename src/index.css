@@ -4,12 +4,16 @@
   box-sizing: border-box;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
-
 
 .container {
   padding: 24px;

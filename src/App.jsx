@@ -4,7 +4,7 @@ import Main from "./pages/Main/Main";
 /* 
 TODO: 
 
-Делать по видео: https://youtu.be/bD0UXb7kD_k?list=PLu_vAIOaYQ6Q5yLM3gtHmrrtYE-MywJg2&t=878
+Делать по видео:https://youtu.be/bD0UXb7kD_k?list=PLu_vAIOaYQ6Q5yLM3gtHmrrtYE-MywJg2&t=1670
 */
 
 function App() {
