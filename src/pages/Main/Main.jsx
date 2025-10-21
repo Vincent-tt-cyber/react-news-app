@@ -3,9 +3,11 @@ import styles from "./Main.module.css";
 import NewBanner from "../../components/NewBanner/NewBanner";
 import { getNews } from "../../api/apiNews";
 import NewsList from "../../components/NewsList/NewsList";
+import Skeleton from "../../components/Skeleton/Skeleton";
 
 const Main = () => {
   const [news, setNews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -22,8 +24,16 @@ const Main = () => {
   }, []);
   return (
     <main className={styles.main}>
-      {news.length > 0 ? <NewBanner item={news[0]} /> : null}
-      <NewsList news={news} />
+      {news.length > 0 && !isLoading ? (
+        <Banner item={news[0]} />
+      ) : (
+        <Skeleton count={1} type="banner" />
+      )}
+      {!isLoading ? (
+        <NewsList news={news} />
+      ) : (
+        <Skeleton count={10} type="item" />
+      )}
     </main>
   );
 };
