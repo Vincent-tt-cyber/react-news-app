@@ -3,8 +3,6 @@ import styles from "./NewsList.module.css";
 import NewsItem from "../NewsItem/NewsItem";
 
 const NewsList = ({ news }) => {
-  console.log(news);
-  
   return (
     <div className={styles["news-list"]}>
       {news.map((item) => {
